@@ -17,3 +17,6 @@ require("plugin-config.nvim-treesitter")
 -- 内置LSP Servers
 require("lsp.setup")
 require("lsp.cmp")
+require("lsp.ui")
+require("lsp.null-ls")
+

@@ -8,8 +8,8 @@ packer.startup({
         use 'rmehri01/onenord.nvim'
         -- nvim-tree
         use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
-         -- bufferline
-        use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
+        -- bufferline
+        use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" } })
         -- lualine
         use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
         use("arkav/lualine-lsp-progress")
@@ -17,7 +17,7 @@ packer.startup({
         use { 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
         -- telescope extensions
         use "LinArcX/telescope-env.nvim"
-         -- dashboard-nvim
+        -- dashboard-nvim
         use("glepnir/dashboard-nvim")
         -- project
         use("ahmedkhalf/project.nvim")
@@ -40,9 +40,14 @@ packer.startup({
         use("onsails/lspkind-nvim")
         -- 常见编程语言代码段
         use("rafamadriz/friendly-snippets")
+
         use("simrat39/rust-tools.nvim")
+        use("b0o/schemastore.nvim")
+        use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
 
         use("github/copilot.vim")
+
+        use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 
     end,
     config = {
@@ -62,5 +67,3 @@ packer.startup({
         },
     },
 })
-
-

@@ -5,9 +5,19 @@ local lsp_installer = require("nvim-lsp-installer")
 -- key 必须为下列网址列出的名称
 -- https://github.com/williamboman/nvim-lsp-installer#available-lsps
 local servers = {
+  -- lua配置
   sumneko_lua = require("lsp.config.lua"), -- lua/lsp/config/lua.lua
+  -- rust配置
   rust_analyzer = require("lsp.config.rust"),
-  pyright = require('lsp.config.python')
+  -- python配置
+  pyright = require('lsp.config.python'),
+  -- 前端配置
+  html = require("lsp.config.html"),
+  cssls = require("lsp.config.css"),
+  emmet_ls = require("lsp.config.emmet"),
+  jsonls = require("lsp.config.json"),
+  tsserver = require("lsp.config.ts"),
+
 }
 -- 自动安装 Language Servers
 for name, _ in pairs(servers) do
@@ -21,13 +31,13 @@ for name, _ in pairs(servers) do
 end
 
 lsp_installer.on_server_ready(function(server)
-    local config = servers[server.name]
-    if config == nil then
-        return
-    end
-    if config.on_setup then
-        config.on_setup(server)
-    else
-        server:setup({})
-    end
+  local config = servers[server.name]
+  if config == nil then
+    return
+  end
+  if config.on_setup then
+    config.on_setup(server)
+  else
+    server:setup({})
+  end
 end)
