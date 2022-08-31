@@ -6,7 +6,7 @@ local lsp_installer = require("nvim-lsp-installer")
 -- https://github.com/williamboman/nvim-lsp-installer#available-lsps
 local servers = {
   -- lua配置
-  sumneko_lua = require("lsp.config.lua"), -- lua/lsp/config/lua.lua
+  sumneko_lua = require("lsp.config.lua"), 
   -- rust配置
   rust_analyzer = require("lsp.config.rust"),
   -- python配置
