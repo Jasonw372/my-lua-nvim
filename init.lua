@@ -14,9 +14,9 @@ require("plugin-config.telescope")
 require("plugin-config.dashboard")
 require("plugin-config.project")
 require("plugin-config.nvim-treesitter")
+require("plugin-config.toggleterm")
 -- 内置LSP Servers
 require("lsp.setup")
 require("lsp.cmp")
 require("lsp.ui")
 require("lsp.null-ls")
-
