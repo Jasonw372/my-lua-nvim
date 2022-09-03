@@ -33,6 +33,12 @@ brew install neovim
 ```bash
 git clone git@github.com:Jasonw372/my-lua-nvim.git ~/.config/nvim/
 ```
+
+### 安装插件 
+```bash
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
 ### 安装配置中的插件
 nvim中输入`:PackerSync`
 > 有能力建议科学上网，虽然已经换源，但是难免出现异常，可以多试几次
