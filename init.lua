@@ -15,6 +15,7 @@ require("plugin-config.dashboard")
 require("plugin-config.project")
 require("plugin-config.nvim-treesitter")
 require("plugin-config.toggleterm")
+require("plugin-config.nvim-autopairs")
 -- 内置LSP Servers
 require("lsp.setup")
 require("lsp.cmp")

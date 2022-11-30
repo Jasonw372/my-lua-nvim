@@ -19,10 +19,10 @@ cmp.setup({
   },
   -- 补全源
   sources = cmp.config.sources({
+    { name = "copilot", group_index = 2 },
     { name = "nvim_lsp" },
     -- For vsnip users.
     { name = "vsnip" },
-
     -- For luasnip users.
     -- { name = 'luasnip' },
 
